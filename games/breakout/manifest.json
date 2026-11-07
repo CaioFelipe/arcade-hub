@@ -1,0 +1,22 @@
+{
+  "id": "breakout",
+  "title": "Breakout Arcade",
+  "collection_id": "pygame-community",
+  "author": "Comunidade Pygame",
+  "repo_url": "https://www.pygame.org",
+  "license": "MIT",
+  "category": "Arcade Clássico",
+  "players": "1 Jogador",
+  "description": "Controle a base deslizante para rebater a esfera e quebrar todos os blocos de proteção da barreira superior.",
+  "controls": {
+    "movement": "Setas Esquerda/Direita ou Movimento do Mouse",
+    "action": "Rebater a bola",
+    "exit": "ESC ou Fechar Janela"
+  },
+  "engine": "Pygame 2.6",
+  "type": "standalone",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "f580e28a9603b08c0510da81f6f178404629551d72cdec9c7f7a44d3c86ec72c"
+}

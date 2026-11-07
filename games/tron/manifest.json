@@ -1,0 +1,23 @@
+{
+  "id": "tron",
+  "title": "Tron Light Cycles",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Arcade Clássico",
+  "players": "2 Jogadores (Local)",
+  "description": "Duelo de motos de luz na arena cibernética. Trace sua linha neon e force o oponente a colidir primeiro.",
+  "controls": {
+    "movement": "Jogador 1: W/A/S/D • Jogador 2: Setas Direcionais",
+    "action": "Virar a 90 graus",
+    "exit": "Fechar Janela"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "tron",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "0829265a8de0b1e39654c058a0edd517d044214910b875929bf844e5ad96da3f"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "snake",
+  "title": "Snake Arcade",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Arcade Clássico",
+  "players": "1 Jogador",
+  "description": "Controle a serpente no grid, devore maçãs para crescer e aumente sua pontuação evitando colidir contra as bordas.",
+  "controls": {
+    "movement": "Setas Direcionais (Cima, Baixo, Esquerda, Direita)",
+    "action": "Espaço (Pausa / Reiniciar)",
+    "exit": "Fechar Janela ou ESC"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "snake",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "d32983661b81a69f69c5bfe7244fd1cfd16e49a129d7f57d465e8762a994390c"
+}

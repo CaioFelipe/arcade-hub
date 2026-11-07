@@ -1,0 +1,23 @@
+{
+  "id": "pacman",
+  "title": "Pacman Retrô",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Arcade Clássico",
+  "players": "1 Jogador",
+  "description": "Navegue pelo labirinto clássico, colete todas as pílulas brancas e desvie dos quatro fantasmas que patrulham os corredores.",
+  "controls": {
+    "movement": "Setas Direcionais",
+    "action": "Aceleração contínua",
+    "exit": "Fechar Janela ou ESC"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "pacman",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "2d7b0ba81c4ac52d482a9a3c11572f6c74ffaea039f201ac2428d5405d9f267f"
+}

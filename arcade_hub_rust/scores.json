@@ -1,0 +1,266 @@
+{
+  "scores": {
+    "connect4": [
+      {
+        "name": "Jogador Local",
+        "score": 200,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 200,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 200,
+        "date": "Hoje"
+      }
+    ],
+    "tiles": [
+      {
+        "name": "Jogador Local",
+        "score": 650,
+        "date": "Hoje"
+      }
+    ],
+    "minesweeper": [
+      {
+        "name": "Jogador Local",
+        "score": 560,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 330,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 240,
+        "date": "Hoje"
+      }
+    ],
+    "cannon": [
+      {
+        "name": "Jogador Local",
+        "score": 350,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 350,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 50,
+        "date": "Hoje"
+      }
+    ],
+    "flappy": [
+      {
+        "name": "Jogador Local",
+        "score": 120,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 40,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 30,
+        "date": "Hoje"
+      }
+    ],
+    "breakout": [
+      {
+        "name": "Jogador Local",
+        "score": 1500,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 900,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 100,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 25,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 10,
+        "date": "Hoje"
+      }
+    ],
+    "pacman": [
+      {
+        "name": "Jogador Local",
+        "score": 2010,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 230,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 20,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 20,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 20,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 20,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 20,
+        "date": "Hoje"
+      }
+    ],
+    "pong": [
+      {
+        "name": "Jogador Local",
+        "score": 270,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 10,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 10,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 10,
+        "date": "Hoje"
+      }
+    ],
+    "space_odyssey": [
+      {
+        "name": "Jogador Local",
+        "score": 238628,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 29454,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 16010,
+        "date": "Hoje"
+      },
+      {
+        "name": "Piloto Safira",
+        "score": 14200,
+        "date": "Hoje"
+      },
+      {
+        "name": "Comandante",
+        "score": 9800,
+        "date": "Ontem"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 5855,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 1545,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 915,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 890,
+        "date": "Hoje"
+      }
+    ],
+    "snake": [
+      {
+        "name": "Jogador Local",
+        "score": 310,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 240,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 190,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 50,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 20,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 10,
+        "date": "Hoje"
+      }
+    ],
+    "tron": [
+      {
+        "name": "Jogador Local",
+        "score": 274,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 223,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 99,
+        "date": "Hoje"
+      },
+      {
+        "name": "Jogador Local",
+        "score": 71,
+        "date": "Hoje"
+      }
+    ]
+  }
+}

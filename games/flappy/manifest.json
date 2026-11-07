@@ -1,0 +1,23 @@
+{
+  "id": "flappy",
+  "title": "Flappy Bird",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Ação & Reflexos",
+  "players": "1 Jogador",
+  "description": "Toque na tela para bater as asas e manter a altitude enquanto passa pelas aberturas dos canos em movimento.",
+  "controls": {
+    "movement": "Clique do Mouse ou Barra de Espaço",
+    "action": "Impulso para cima",
+    "exit": "Fechar Janela ou ESC"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "flappy",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "7dfd9b1b4e682cdc1fef4e9101e2ea4d3f6a9ef3fee434b81b343a25a7515bbc"
+}

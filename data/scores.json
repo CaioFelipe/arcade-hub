@@ -1,0 +1,33 @@
+{
+  "space_odyssey": [
+    {
+      "name": "Comandante Fox",
+      "score": 148200,
+      "level": 14
+    },
+    {
+      "name": "Piloto Zero",
+      "score": 122950,
+      "level": 11
+    },
+    {
+      "name": "Astro",
+      "score": 98400,
+      "level": 9
+    }
+  ],
+  "snake": [
+    {
+      "name": "SnakeMaster",
+      "score": 420,
+      "level": 8
+    }
+  ],
+  "breakout": [
+    {
+      "name": "BlockBreaker",
+      "score": 1850,
+      "level": 5
+    }
+  ]
+}

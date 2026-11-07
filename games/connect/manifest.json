@@ -1,0 +1,23 @@
+{
+  "id": "connect",
+  "title": "Conecte Quatro",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Estratégia & Tabuleiro",
+  "players": "2 Jogadores (Local)",
+  "description": "Alinhe 4 fichas da sua cor horizontal, vertical ou diagonalmente antes que seu adversário complete a dele.",
+  "controls": {
+    "movement": "Clique na coluna desejada",
+    "action": "Soltar ficha",
+    "exit": "Fechar Janela"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "connect",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "52c275c675dfac2e76cbfad4ad3a932a26fc9faea13c947a980413390d99aa81"
+}

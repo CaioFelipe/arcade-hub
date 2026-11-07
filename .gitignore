@@ -1,0 +1,52 @@
+# ==============================================================================
+# Planejamento Financeiro e Pessoal (Privado / Excluido do Repositorio)
+# ==============================================================================
+CONTEXTO_FINANCEIRO.md
+dashboard_evolucao.html
+painel_financeiro.html
+PLANEJAMENTO_CASA_NOVA_E_FUTURO_2027.md
+PLANEJAMENTO_FINANCEIRO.md
+Planejamento_Financeiro_Completo.zip
+planta_terreno.jpg
+tabela_financeira_interativa.html
+
+*FINANCEIRO*
+*financeiro*
+*planta*
+*terreno*
+*casa_nova*
+*CASA_NOVA*
+*evolucao*
+*.zip
+
+# ==============================================================================
+# Rust Build Artifacts & Intermediate Cache
+# ==============================================================================
+target/
+**/target/
+**/*.rs.bk
+
+# ==============================================================================
+# Python Cache & Virtual Environments
+# ==============================================================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+.venv/
+ENV/
+
+# ==============================================================================
+# OS & Editor Files
+# ==============================================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

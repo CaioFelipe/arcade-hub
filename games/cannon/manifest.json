@@ -1,0 +1,23 @@
+{
+  "id": "cannon",
+  "title": "Canhão Balístico",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Ação & Reflexos",
+  "players": "1 Jogador",
+  "description": "Calcule trajetórias parabólicas e dispare tiros balísticos contra alvos voadores em velocidade progressiva.",
+  "controls": {
+    "movement": "Clique do Mouse para mirar e atirar",
+    "action": "Disparo parabólico",
+    "exit": "Fechar Janela"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "cannon",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "6d1db4f7a8d659a384706bcd52a497fc5556d20e86092cec171846891adab2f5"
+}

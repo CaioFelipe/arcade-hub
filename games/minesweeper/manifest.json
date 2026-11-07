@@ -1,0 +1,23 @@
+{
+  "id": "minesweeper",
+  "title": "Campo Minado",
+  "collection_id": "grant-jenks",
+  "author": "Grant Jenks",
+  "repo_url": "https://github.com/grantjenks/free-python-games",
+  "license": "Apache 2.0",
+  "category": "Puzzle & Raciocínio",
+  "players": "1 Jogador",
+  "description": "Revele as casas seguras do tabuleiro através de pistas lógicas numéricas e evite acionar minas escondidas.",
+  "controls": {
+    "movement": "Clique do Mouse nas casas",
+    "action": "Revelar casa",
+    "exit": "Fechar Janela"
+  },
+  "engine": "Python Turtle Nativo",
+  "type": "freegames",
+  "module": "minesweeper",
+  "featured": false,
+  "security_verified": true,
+  "security_errors": [],
+  "sha256": "7129c4c1b73ff532c50fa49e9853aa295d8cfdd5cdbf94be9bf6d862242d4315"
+}
