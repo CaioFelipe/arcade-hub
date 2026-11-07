@@ -20,15 +20,12 @@ tabela_financeira_interativa.html
 *.zip
 
 # ==============================================================================
-# Rust Build Artifacts & Intermediate Cache
+# Implementacao Legada HTML/Python (Mantida apenas localmente)
 # ==============================================================================
-target/
-**/target/
-**/*.rs.bk
-
-# ==============================================================================
-# Python Cache & Virtual Environments
-# ==============================================================================
+app/
+games/
+data/
+SECURITY_ARCHITECTURE.md
 __pycache__/
 **/__pycache__/
 *.py[cod]
@@ -39,6 +36,13 @@ venv/
 env/
 .venv/
 ENV/
+
+# ==============================================================================
+# Rust Build Artifacts & Intermediate Cache
+# ==============================================================================
+target/
+**/target/
+**/*.rs.bk
 
 # ==============================================================================
 # OS & Editor Files
