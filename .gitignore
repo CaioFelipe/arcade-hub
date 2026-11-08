@@ -22,9 +22,9 @@ tabela_financeira_interativa.html
 # ==============================================================================
 # Implementacao Legada HTML/Python (Mantida apenas localmente)
 # ==============================================================================
-app/
-games/
-data/
+/app/
+/games/
+/data/
 SECURITY_ARCHITECTURE.md
 __pycache__/
 **/__pycache__/
