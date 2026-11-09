@@ -1,69 +1,65 @@
-# Estrutura de Seções & Anatomia de Interface — PyArcade Hub
+# Estrutura de Seções & Anatomia de Interface — Arcade Hub (Rust Native Edition)
 
-Este documento define a arquitetura de informação e a composição visual do **PyArcade Hub**, a estação local e offline de jogos desenvolvidos em Python.
+Este documento define a arquitetura de informação e a composição visual do **Arcade Hub**, a estação desktop offline de jogos clássicos construída 100% em **Rust Puro** com renderização nativa por GPU (**Macroquad**).
 
 ---
 
-## 1. Top Bar & Header de Comando
-- **Objetivo**: Navegação rápida, alternância de filtros e acesso universal à busca.
+## 1. Top Bar & Header de Comando (`ui/header.rs`)
+- **Objetivo**: Navegação rápida, acesso universal à busca e adição de jogos ao catálogo.
 - **Elementos**:
-  - Logo vetorial da marca (`Arcade Hub`).
-  - Barra de busca instantânea com atalho `Ctrl + K` (filtro em tempo real por título ou gênero).
-  - Links limpos de navegação (`Explorar`, `Minha Coleção`, `Favoritos`).
-  - Seletor de visualização (Grade / Lista).
-- **Padrão de UX**: Limpo, sem ruídos de telemetria, sem badges decorativos vazios e sem emojis.
+  - Logo vetorial geométrico da marca (`ARCADE HUB`).
+  - Barra de busca instantânea com atalho `Ctrl + K` (filtro em tempo real por título, autor ou categoria).
+  - Botão de ação `+ Adicionar Jogo` para abertura do modal de cadastro.
+- **Padrão de UX**: Limpo, sem ruídos de telemetria, sem badges decorativos vazios e com ícones desenhados via primitivas geométricas.
 
 ---
 
-## 2. Hero Section: Destaque da Semana & Partida Rápida
-- **Objetivo**: Chamar a atenção imediata na primeira dobra (*above the fold*), permitindo abrir o jogo principal com 1 clique.
+## 2. Hero Section: Destaque Principal & Partida Rápida (`ui/hero.rs`)
+- **Objetivo**: Chamar a atenção imediata na primeira dobra (*above the fold*), permitindo iniciar o jogo principal com 1 clique na mesma janela.
 - **Hierarquia Espacial**:
-  - **Centro**: Card cinematográfico de destaque com arte vetorial em SVG animada do jogo em foco.
-  - **Flanqueamento Lateral Esquerdo**: Card de atalhos rápidos de teclado/controles recomendados.
-  - **Flanqueamento Lateral Direito**: Mini-painel com recorde local pessoal (*High Score*) e estatísticas da última sessão.
-  - **Ação Principal**: Botão de alto contraste `Jogar Agora` (aciona subprocesso Python nativo).
+  - **Card Cinematográfico**: Destaque para **Space Odyssey (The Apex Overhaul)** com arte vetorial renderizada em GPU, descrição tática e botões `Jogar Agora` e `Ficha Técnica`.
+  - **Painel Lateral de Status**: Especificações de performance nativa (`60+ FPS V-Sync`, `Engine Rust Puro`, `100% Offline`) e atalhos de combate.
 
 ---
 
-## 3. Navegação de Categorias & Coleções de Criadores
-- **Objetivo**: Segmentar centenas de jogos por estilo de jogo e por coleções oficiais de desenvolvedores da comunidade.
-- **Categorias & Coleções Planejadas**:
-  - `Todos os Jogos`
-  - `Coleção Grant Jenks (Free Python Games)` — Snake, Pacman, Pong, Flappy Bird, Tron, Cannon, Tiles
-  - `Coleção Al Sweigart (Invent with Python)` — Tetromino, Slide Puzzle, Memory, Simulações
-  - `Coleção Pygame Arcade` — Clássicos da comunidade Pygame com som e física
-  - `Arcade Clássico` (Fliperamas e Retrô)
-  - `Puzzle & Raciocínio` (Lógica e Tabuleiro)
-  - `Favoritos & Recentes`
+## 3. Navegação de Categorias & Coleções de Inspiração (`ui/gallery.rs`)
+- **Objetivo**: Segmentar o catálogo por gênero de jogo e pelas coleções open-source que inspiraram as recriações em Rust.
+- **Categorias & Filtros**:
+  - `Todos`
+  - `Arcade Clássico` — Snake Arcade, Pong Arcade, Breakout Prism, Pac-Man Classic
+  - `Ação & Reflexos` — Space Odyssey, Flappy Jetpack Ultra, Tron Lightcycles
+  - `Puzzle & Raciocínio` — Cannon Ballistics, Memory Tiles
+  - `Estratégia & Tabuleiro` — Minesweeper Grid, Four in a Row
+- **Cards de Coleções no GitHub**:
+  - `Grant Jenks Collection` — Clássicos recriados em Rust (Snake, Tron, Cannon, Tiles, Pac-Man)
+  - `Al Sweigart Collection` — Clássicos recriados em Rust (Breakout Prism, Four in a Row)
+  - `Comunidade Arcade Rust` — Motores expandidos em Rust (Space Odyssey, Pong, Flappy Jetpack Ultra, Minesweeper)
 
 ---
 
-## 4. Grid da Galeria de Jogos (Catálogo Modular)
-- **Objetivo**: Apresentação visual limpa dos jogos disponíveis, com posters vetoriais estilizados e créditos explícitos.
+## 4. Grid da Galeria de Jogos (`ui/gallery.rs`)
+- **Objetivo**: Apresentação visual estruturada em 3 colunas responsivas com feedback imediato de hover.
 - **Card do Jogo**:
-  - Capa temática com arte vetorial em SVG.
-  - Nome do Jogo e categoria principal.
-  - Crédito do autor (ex: `Grant Jenks`, `Al Sweigart`, `Comunidade`).
-  - Botão de ação rápida `Jogar`.
-  - Acesso à ficha técnica completa.
+  - Ícone vetorial estilizado e título em destaque.
+  - Tag de categoria em amarelo dourado (`#FACC15`) e crédito de autoria/coleção.
+  - Resumo da mecânica principal do jogo.
+  - Botões de ação rápida: `Jogar` (inicia imediatamente no palco integrado) e `Ficha` (abre a gaveta lateral de detalhes).
 
 ---
 
-## 5. Modal / Gaveta Lateral de Detalhes, Controles & Créditos
-- **Objetivo**: Exibir instruções claras antes de jogar e dar visibilidade total aos criadores do código.
+## 5. Gaveta Lateral de Detalhes, Controles & Créditos (`ui/drawer.rs`)
+- **Objetivo**: Exibir instruções claras antes da partida e dar visibilidade às licenças e repositórios de referência.
 - **Conteúdo**:
-  - Bloco de Créditos do Desenvolvedor: Nome do autor, licença de código aberto (MIT, Apache 2.0) e link direto para o repositório no GitHub.
-  - Diagrama visual de teclas (ex: `WASD` / `Setas Direcionais` + `Espaço` para atirar/pular).
-  - Regras do jogo e pontuação.
-  - Tabela de recordes locais salvos no disco (`scores.json`).
-  - Botão `Abrir Pasta do Código` (para inspecionar ou modificar o script Python do jogo).
+  - Ficha Técnica: Autor/Coleção, licença aberta (`MIT`, `Apache 2.0`, `Simplified BSD`) e assinatura do motor (`Arquitetura: 100% Rust Puro | Engine: Macroquad 60+ FPS`).
+  - Botão de acesso externo para o repositório de referência no GitHub.
+  - Descrição da mecânica e quadro detalhado de **Comandos de Controle** (Movimento e Ação/Disparo).
+  - Botão principal `Iniciar Jogo no Palco`.
 
 ---
 
-## 6. Central de Gerenciamento, Segurança & Adição de Jogos
-- **Objetivo**: Facilitar a inclusão de novos jogos feitos pela comunidade ou criados pelo próprio usuário com garantia de execução segura (detalhada em `SECURITY_ARCHITECTURE.md`).
-- **Recursos Técnicos de Bastidores**:
-  - Detecção automática de novos scripts na pasta `/games/`.
-  - Validador de `manifest.json` e verificação de integridade `SHA-256`.
-  - Validação estática via AST (`ast_validator.py`) + execução isolada via Python Audit Hooks (`security_runner.py`), bloqueando acesso a rede, terminal e arquivos externos.
-  - SDK padrão (`hub_sdk.py`) para persistência segura de recordes e progresso com 1 arquivo `main.py`.
+## 6. Palco Integrado & Persistência Local (`ui/stage.rs` & `models.rs`)
+- **Objetivo**: Executar todos os 11 jogos nativamente dentro da mesma janela com HUD unificado e salvamento automático de recordes.
+- **Recursos Técnicos**:
+  - Barra superior do console (`ui/stage.rs`) exibindo título do jogo, pontuação em tempo real e controles rápidos (`Voltar`, `Pausar [P]`, `Reiniciar [R]`).
+  - Persistência automática da maior pontuação em `scores.json` ao retornar para a galeria.
+  - Fundo interativo (`ui/background.rs`) com grade tática de coordenadas, holofote reativo e constelação de partículas com repulsão vetorial ao mouse.

@@ -46,7 +46,7 @@ pub fn draw_details_drawer(
     draw_text_ui(&format!("Autor Original: {}", game.author), drawer_x + pad + 16.0, y + 26.0, 13.0, TEXT_PRIMARY, &fonts.bold);
     draw_text_ui(&format!("Licença de Software: {}", game.license), drawer_x + pad + 16.0, y + 48.0, 12.0, ICE_BLUE, &fonts.regular);
     draw_text_ui(&format!("Coleção: {}", game.collection), drawer_x + pad + 16.0, y + 70.0, 12.0, TEXT_MUTED, &fonts.regular);
-    draw_text_ui("Origem: Python Open-Source  |  Engine: Rust Nativo 60 FPS", drawer_x + pad + 16.0, y + 92.0, 11.0, EMERALD, &fonts.regular);
+    draw_text_ui("Arquitetura: 100% Rust Puro  |  Engine: Macroquad 60+ FPS", drawer_x + pad + 16.0, y + 92.0, 11.0, EMERALD, &fonts.regular);
 
     y += 122.0;
 

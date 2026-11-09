@@ -1,56 +1,42 @@
-# Checklist de Acompanhamento do Projeto — Arcade Hub (Galeria Local de Jogos Python)
+# Checklist de Acompanhamento do Projeto — Arcade Hub (Estação Desktop 100% em Rust Puro)
 
-## Fase 1: Diagnóstico & Briefing do Produto
-- [x] Entidade do Produto definida (Launcher & Galeria Desktop Offline para Execução de Jogos Python na Mesma Janela).
-- [x] Público-alvo e Proposta de Valor central (Acesso sem fricção a centenas de jogos locais em Python com estatísticas, capas e palco integrado).
-- [x] Purificação total de telemetria artificial e AI Slop em `SECTIONS.md` e `app/index.html`.
-- [x] Paleta de Cores Oficial estabelecida (Safira Escuro `#090C14` + Slate Naval `#101522` + Azul Cobalto Gamer `#2563EB` + Pontos Estelares no grid).
-- [x] Seções Especiais de Repositórios Públicos integradas com créditos explícitos, licença e links no GitHub.
+## Fase 1: Diagnóstico & Identidade do Produto
+- [x] Entidade do Produto definida (Launcher & Galeria Desktop Offline para Execução Nativa de Jogos Clássicos em Rust na Mesma Janela).
+- [x] Proposta de Valor central (Inicialização instantânea `<50ms`, zero portas de rede, zero dependências externas e 60+ FPS via GPU).
+- [x] Paleta de Cores Oficial estabelecida (Safira Escuro `#090C14` + Slate Naval `#101522` + Azul Cobalto Gamer `#2563EB` + Azul Gelo `#60A5FA` + Amarelo Dourado `#FACC15` + Coral `#F43F5E`).
+- [x] Seções de Coleções Open-Source integradas com créditos explícitos, licença e links diretos para o GitHub.
 
-## Fase 2: Curadoria de Referências & DNA Estético
-- [x] DNA Estético alinhado: Geometria e linhas nítidas de 1px da Opção 2 com paleta Safira Escuro e fundo de coordenadas com pontos de cor.
-- [x] Sistema Tipográfico selecionado: Plus Jakarta Sans (Display) + Inter (Interface) + Fira Code (Monospace).
-- [x] Efeitos e materiais: Cantos estruturados de 6-8px, micro-grid industrial com pontos de cor, botões táteis sem halos de neon.
+## Fase 2: DNA Estético & Interface Vetorial (`arcade_hub_rust/src/theme.rs`)
+- [x] Geometria de precisão com linhas nítidas de 1px, cantos estruturados e contraste elevado.
+- [x] Sistema Tipográfico embutido em binário (`assets/font.ttf` e `assets/font_bold.ttf`).
+- [x] Ícones vetoriais desenhados diretamente por código geométrico em GPU (Play, Pause, Restart, Close, Search, GitHub, External Link).
 
-## Fase 3: Planejamento de Seções (`SECTIONS.md`)
-- [x] Estrutura de seções aprovada e purificada em `SECTIONS.md`.
-- [x] Seções de Coleções Comunitárias e Ficha Técnica com Créditos de Autores adicionadas.
-- [x] Wireframe da primeira dobra (Header + Hero flanqueado + Cards de comandos e placar) validado.
+## Fase 3: Arquitetura de Telas & Navegação (`SECTIONS.md`)
+- [x] Header fixo (`ui/header.rs`) com busca instantânea (`Ctrl+K`) e acesso ao modal `+ Adicionar Jogo`.
+- [x] Hero Section (`ui/hero.rs`) destacando **Space Odyssey** com arte vetorial animada e painel tático.
+- [x] Galeria responsiva (`ui/gallery.rs`) com filtros por coleção open-source e por categoria de jogo.
+- [x] Gaveta lateral de detalhes (`ui/drawer.rs`) e modal de cadastro (`ui/add_modal.rs`).
 
-## Fase 4: Infraestrutura, Executável Único (`ArcadeHub.exe`) & Palco na Mesma Janela
-- [x] Compilação de executável único (`ArcadeHub.exe`) na raiz do projeto sem necessidade de arquivos `.bat` ou `.pyw` extras.
-- [x] Ponto de entrada nativo (`app/main_desktop.py`) abrindo janela dedicada em modo App sem janelas pretas de terminal.
-- [x] Motor gráfico em memória (`app/game_engine.py` — `InWindowGameRunner` com `SDL_VIDEODRIVER="dummy"`) renderizando todos os 11 jogos e jogos comunitários diretamente no `<canvas id="arcade-canvas">` dentro da mesma janela do Hub.
-- [x] Catálogo de jogos configurado em `games/` com manifestos individuais (`manifest.json`), hashes SHA-256 e registro central (`catalog.json`).
+## Fase 4: Motor Nativo em Rust Puro & Palco Integrado (`ArcadeHub.exe`)
+- [x] Consolidação do repositório exclusivamente em **Rust Puro** (`Edition 2024` + `Macroquad 0.4`), eliminando a antiga implementação legada em HTML/Python.
+- [x] Compilação de executável único (`ArcadeHub.exe`) portátil na raiz do projeto sem abrir janelas de terminal (`windows_subsystem = "windows"`).
+- [x] Palco integrado (`ui/stage.rs`) executando todos os 11 jogos nativamente dentro da mesma janela com controles de pausa (`P`), reinício (`R`) e retorno (`ESC`).
+- [x] Persistência local de recordes em `scores.json` (`models.rs`).
 
-## Fase 5: Header + Hero Section (Exclusivo)
-- [x] Header com logo vetorial, busca universal (`Ctrl+K`), botão `+ Adicionar Jogo` e navegação limpa.
-- [x] Hero dentro da primeira dobra com jogo em destaque (`Space Odyssey`), nave espacial modular em SVG e botão de execução direta `Jogar Agora`.
-- [x] Flanqueamento lateral completo: Card de Comandos Rápidos à esquerda e Placar Local de Recordes à direita.
+## Fase 5: Catálogo de 11 Jogos Nativos em Rust (`arcade_hub_rust/src/games/`)
+- [x] **Space Odyssey** (`space_odyssey.rs`)
+- [x] **Breakout Prism** (`breakout.rs`)
+- [x] **Flappy Jetpack Ultra** (`flappy.rs`)
+- [x] **Snake Arcade** (`snake.rs`)
+- [x] **Pong Arcade** (`pong.rs`)
+- [x] **Tron Lightcycles** (`tron.rs`)
+- [x] **Cannon Ballistics** (`cannon.rs`)
+- [x] **Memory Tiles** (`tiles.rs`)
+- [x] **Minesweeper Grid** (`minesweeper.rs`)
+- [x] **Four in a Row** (`connect4.rs`)
+- [x] **Pac-Man Classic** (`pacman.rs`)
 
-## Fase 6: Verificação Visual Real (Chrome DevTools MCP)
-- [x] Screenshots capturados e auditados criticamente em alta resolução:
-  - Dobra Superior (Header + Hero): `screenshot_app_hero.png`
-  - Página Completa (Grid + Coleções): `screenshot_app_full.png`
-  - Gaveta de Detalhes & Créditos: `screenshot_app_drawer.png`
-  - Execução de Jogos na Mesma Janela (`Space Odyssey` / `Snake Arcade`): `screenshot_inwindow_gameplay.png`
-  - Estúdio Padronizado de Criação e Validação AST (`+ Adicionar Jogo`): `screenshot_add_game_studio.png`
-- [x] Contraste, alinhamentos e ausência de distorções visuais verificados e validados.
-
-## Fase 7: Cascata Modular & Estúdio Padronizado de Adição de Jogos
-- [x] Seção de Coleções em Destaque (Grant Jenks, Al Sweigart, Comunidade Pygame) com biografia, licença e links diretos para o GitHub.
-- [x] Grade de jogos com filtros rápidos por categoria (Todos, Arcade, Ação, Puzzle, Estratégia) e capas vetoriais ou customizadas.
-- [x] Modal padronizado **"+ Adicionar Jogo"** (`#add-game-modal`) com Nome, Autor, Categoria, Descrição, Upload de Imagem de Capa, Código Python (`main.py` com template `class Game` e importação de `.py`) e Validação de Segurança AST em tempo real.
-- [x] Auto-descoberta automática de novas pastas adicionadas em `games/<id>/`.
-
-## Fase 8: Arquitetura de Segurança & Sandbox Comunitária (`SECURITY_ARCHITECTURE.md`)
-- [x] Especificação da arquitetura de Defesa em Profundidade documentada em `SECURITY_ARCHITECTURE.md`.
-- [x] Camada 1 — Scanner Estático de AST (`app/ast_validator.py`): Allowlist de módulos seguros e bloqueio de imports de sistema/rede (`os`, `sys`, `subprocess`, `socket`, `eval`, `exec`, `open`, `__import__`).
-- [x] Camada 2 — Guardião de Runtime (`app/security_runner.py`): Python Audit Hooks (`sys.addaudithook` / PEP 578) e namespace restrito `safe_builtins` bloqueando rede, terminal e DLLs.
-- [x] Camada 3 — SDK Oficial de Jogos (`app/hub_sdk.py`): API controlada para salvar recordes e estado do jogo (JSON sanitizado até 64 KB) sem acesso direto ao disco.
-- [x] Camada 4 — Verificação de Hash (`SHA-256`) em todos os 11 jogos do catálogo e em novos jogos criados no Hub.
-
-## Fase 9: Evolução Contínua dos Jogos — O Top dos Top da Modalidade
+## Fase 6: Evolução Contínua dos Jogos — O Top dos Top da Modalidade
 - [x] **Space Odyssey (The Apex Overhaul)**:
   - [x] Física 2D vetorial com aceleração, amortecimento suave e inclinação dinâmica (tilt) da fuselagem.
   - [x] Manobra tática de esquiva (Dash / Barrel Roll com `Shift`) com invulnerabilidade e afterimages holográficos.
@@ -62,12 +48,20 @@
   - [x] Frota alienígena invasora com caças batedores ágeis em curva senoidal e lançadores de minas de proximidade em fragmentação radial.
   - [x] Chefe colossal de setor: Flagship Dreadnought com canhões laterais destrutíveis, fase de sobrecarga e núcleo exposto.
   - [x] Cápsulas táticas e cristais atraídos magneticamente por raio trator (*Tractor Beam*).
-  - [x] Paridade e sincronização total entre o motor nativo em Rust (`ArcadeHub.exe`) e o script Python em `games/space_odyssey/main.py` sob a Sandbox AST.
+- [x] **Breakout Prism (Campaign & Power-Ups Overhaul)**:
+  - [x] Campanha estruturada em 5 fases prismáticas com layouts distintos e 3 seletor de dificuldades (`1`, `2`, `3`).
+  - [x] Blocos especiais de titânio, bombas explosivas em cadeia, canhões laser duplos e multi-bolas.
+- [x] **Flappy Jetpack Ultra (Biomes & Power-Ups Overhaul)**:
+  - [x] 4 biomas futuristas dinâmicos com múltiplas camadas de *parallax*.
+  - [x] Coleta de moedas, escudos de força, *turbo boost*, canos oscilantes e 3 modos de dificuldade (`1`, `2`, `3`).
+- [x] **Snake Cyber Neon (Mazes & Portals Overhaul)**:
+  - [x] 5 labirintos dinâmicos, portais quânticos, frutas especiais, poder fantasma e 3 modos de dificuldade (`1`, `2`, `3`).
+- [x] **Tron Cyber Cycles Neo (Tournament & Tactical AI Overhaul)**:
+  - [x] Torneio Melhor de 5 em 4 arenas, *Turbo Boost* (`Espaço`), pulso EMP (`E`), salto quântico (`J`), portais e IA tática.
 
-## Fase 10: Atmosfera & Interatividade Reativa de Fundo (Rust Nativo)
-- [x] Motor de Fundo Dinâmico (`arcade_hub_rust/src/ui/background.rs`):
-  - [x] Grade de coordenadas táticas com spotlight reativo que ilumina eixos e desenha micro-cruzes de miramento na posição do cursor.
-  - [x] Constelação de 52 nós estelares com física de repulsão vetorial ao aproximar o mouse.
-  - [x] Feixes translúcidos de conexão entre estrelas próximas e traçado de mira direta até o ponteiro do mouse.
-  - [x] Executável nativo compilado em modo `--release` (`ArcadeHub.exe`) com 60+ FPS cravados em GPU.
+## Fase 7: Atmosfera & Interatividade Reativa de Fundo (`ui/background.rs`)
+- [x] Grade de coordenadas táticas com spotlight reativo que ilumina eixos e desenha micro-cruzes de miramento na posição do cursor.
+- [x] Constelação de 52 nós estelares com física de repulsão vetorial ao aproximar o mouse.
+- [x] Feixes translúcidos de conexão entre estrelas próximas e traçado de mira direta até o ponteiro do mouse.
+- [x] Executável nativo compilado em modo `--release` (`ArcadeHub.exe`) com 60+ FPS cravados em GPU.
 
